@@ -15,6 +15,9 @@
 		F43D5E9E236F59C200E852EB /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F43D5E9D236F59C200E852EB /* Preview Assets.xcassets */; };
 		F43D5EA1236F59C200E852EB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F43D5E9F236F59C200E852EB /* LaunchScreen.storyboard */; };
 		F43D5EA9236F5FE900E852EB /* EmojiView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F43D5EA8236F5FE900E852EB /* EmojiView.swift */; };
+		F43D5EAC236F794500E852EB /* Joke+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = F43D5EAA236F794500E852EB /* Joke+CoreDataClass.swift */; };
+		F43D5EAD236F794500E852EB /* Joke+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = F43D5EAB236F794500E852EB /* Joke+CoreDataProperties.swift */; };
+		F43D5EAF236F7E7500E852EB /* AddView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F43D5EAE236F7E7500E852EB /* AddView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +31,9 @@
 		F43D5EA0236F59C200E852EB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F43D5EA2236F59C200E852EB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F43D5EA8236F5FE900E852EB /* EmojiView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmojiView.swift; sourceTree = "<group>"; };
+		F43D5EAA236F794500E852EB /* Joke+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Joke+CoreDataClass.swift"; sourceTree = "<group>"; };
+		F43D5EAB236F794500E852EB /* Joke+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Joke+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		F43D5EAE236F7E7500E852EB /* AddView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -44,6 +50,8 @@
 		F43D5E85236F59BE00E852EB = {
 			isa = PBXGroup;
 			children = (
+				F43D5EAA236F794500E852EB /* Joke+CoreDataClass.swift */,
+				F43D5EAB236F794500E852EB /* Joke+CoreDataProperties.swift */,
 				F43D5EA8236F5FE900E852EB /* EmojiView.swift */,
 				F43D5E90236F59BE00E852EB /* DadJokes */,
 				F43D5E8F236F59BE00E852EB /* Products */,
@@ -64,6 +72,7 @@
 				F43D5E91236F59BE00E852EB /* AppDelegate.swift */,
 				F43D5E93236F59BE00E852EB /* SceneDelegate.swift */,
 				F43D5E98236F59BE00E852EB /* ContentView.swift */,
+				F43D5EAE236F7E7500E852EB /* AddView.swift */,
 				F43D5E9A236F59C200E852EB /* Assets.xcassets */,
 				F43D5E9F236F59C200E852EB /* LaunchScreen.storyboard */,
 				F43D5EA2236F59C200E852EB /* Info.plist */,
@@ -152,11 +161,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F43D5EAC236F794500E852EB /* Joke+CoreDataClass.swift in Sources */,
 				F43D5E97236F59BE00E852EB /* DadJokes.xcdatamodeld in Sources */,
 				F43D5E92236F59BE00E852EB /* AppDelegate.swift in Sources */,
 				F43D5E99236F59BE00E852EB /* ContentView.swift in Sources */,
+				F43D5EAF236F7E7500E852EB /* AddView.swift in Sources */,
 				F43D5E94236F59BE00E852EB /* SceneDelegate.swift in Sources */,
 				F43D5EA9236F5FE900E852EB /* EmojiView.swift in Sources */,
+				F43D5EAD236F794500E852EB /* Joke+CoreDataProperties.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

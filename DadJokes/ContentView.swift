@@ -8,27 +8,35 @@
 
 import SwiftUI
 
-struct Joke {
-    var setup: String
-    var punchLine: String
-    var rating: String
-}
-
 struct ContentView: View {
-    var jokes = [
-        Joke(setup: "Joke 1", punchLine: "punch 1", rating: "rating 1"),
-        Joke(setup: "Joke 2", punchLine: "punch 2", rating: "rating 2"),
-        Joke(setup: "Joke 3", punchLine: "punch 3", rating: "rating 3"),
-        Joke(setup: "Joke 4", punchLine: "punch 4", rating: "rating 4"),
-        Joke(setup: "Joke 5", punchLine: "punch 5", rating: "rating 5")
-    ]
+    
+    @Environment(\.managedObjectContext) var moc
+    
+    @FetchRequest(entity: Joke.entity(), sortDescriptors: [
+        NSSortDescriptor(keyPath: \Joke.setup, ascending: true)
+    ])
+    
+    var jokes: FetchedResults<Joke>
+    
+    @State private var showingAddJoke = false
+    
     var body: some View {
-        List {
-            ForEach(jokes, id: \.setup) { joke in
-                HStack {
-                    EmojiView(for: joke.rating)
-                    Text(joke.setup)
+        NavigationView {
+            List {
+                ForEach(jokes, id: \.setup) { joke in
+                    NavigationLink(destination:
+                        Text(joke.punchline)) {
+                        EmojiView(for: joke.rating)
+                        Text(joke.setup)
+                    }
                 }
+            }
+            .navigationBarTitle("Dad Jokes")
+            .navigationBarItems(trailing: Button("Add") {
+                self.showingAddJoke.toggle()
+            })
+            .sheet(isPresented: $showingAddJoke) {
+                AddView().environment(\.managedObjectContext, self.moc)
             }
         }
     }
